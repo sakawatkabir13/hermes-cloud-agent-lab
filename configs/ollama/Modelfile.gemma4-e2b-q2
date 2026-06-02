@@ -1,0 +1,6 @@
+FROM /opt/models/gemma-4-e2b-it/gemma-4-E2B-it-UD-Q2_K_XL.gguf
+
+# t3.small has limited RAM. 4096 is more realistic than 65536 on this VPS.
+PARAMETER num_ctx 4096
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9

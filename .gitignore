@@ -1,0 +1,46 @@
+# Secrets
+.env
+*.env
+.env.*
+!.env.example
+configs/hermes/.env
+~/.hermes/.env
+
+# Keys and credentials
+*.pem
+*.key
+*.pub
+id_rsa*
+id_ed25519*
+credentials.json
+token.json
+
+# Hermes local data
+.hermes/
+*.db
+*.db-wal
+*.db-shm
+
+# Ollama/model files
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+/opt/
+models/
+
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,18 @@
+# Hermes Agent example config
+# Copy to: ~/.hermes/config.yaml
+# Do not commit your real config if it contains sensitive provider data.
+
+model:
+  provider: custom
+  default: minimax-m3:cloud
+  base_url: http://127.0.0.1:11434/v1
+  api_key: ""
+  context_length: 65536
+
+# Alternative local Gemma-only mode:
+# model:
+#   provider: custom
+#   default: gemma4-e2b-q2
+#   base_url: http://127.0.0.1:11434/v1
+#   api_key: ""
+#   context_length: 65536
