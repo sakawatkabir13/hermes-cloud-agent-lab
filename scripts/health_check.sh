@@ -4,21 +4,21 @@ set -euo pipefail
 echo "===== HOST ====="
 hostnamectl || true
 
-echo "\n===== UPTIME ====="
+printf "\n===== UPTIME =====\n"
 uptime
 
-echo "\n===== MEMORY ====="
+printf "\n===== MEMORY =====\n"
 free -h
 
-echo "\n===== DISK ====="
+printf "\n===== DISK =====\n"
 df -h
 
-echo "\n===== FAILED SYSTEMD SERVICES ====="
+printf "\n===== FAILED SYSTEMD SERVICES =====\n"
 systemctl --failed --no-pager || true
 
-echo "\n===== OLLAMA ====="
+printf "\n===== OLLAMA =====\n"
 systemctl is-active ollama || true
 curl -s http://127.0.0.1:11434/api/tags | jq . || true
 
-echo "\n===== HERMES GATEWAY ====="
+printf "\n===== HERMES GATEWAY =====\n"
 hermes gateway status || true

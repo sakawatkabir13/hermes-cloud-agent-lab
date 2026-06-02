@@ -17,11 +17,11 @@ Manual AWS Console checks:
 Local checks:
 EOF
 
-echo "\nDisk usage:"
+printf "\nDisk usage:\n"
 df -h
 
-echo "\nLargest /opt directories:"
+printf "\nLargest /opt directories:\n"
 sudo du -h --max-depth=1 /opt 2>/dev/null | sort -h || true
 
-echo "\nHermes/Ollama size:"
+printf "\nHermes/Ollama size:\n"
 du -sh ~/.hermes ~/.ollama 2>/dev/null || true
